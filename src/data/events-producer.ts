@@ -5,7 +5,7 @@ import Logger from "../logger";
 const logger = new Logger("[Event-Producer] -->");
 const eventLogger = new Logger("Event");
 
-export class EventProducer {
+export default class EventProducer {
   constructor(private eventBus: EventBus) {}
 
   publish = (...events: IEvent[]) => {

@@ -11,7 +11,7 @@ export default class EventBus {
     emitter.emit(topic, event.get());
   };
 
-  subcribe = (topic: string, callback: (data: EventInfo) => void): void => {
+  subscribe = (topic: string, callback: (data: EventInfo) => void): void => {
     emitter.on(topic, (data) => {
       logger.debug(`received event in topic : ${topic}  =>>> data.type`);
       callback(data);

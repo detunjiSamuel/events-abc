@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc" : "tsc",
+    "start" : "npx ts-node src/index.ts",
+    "build" : "tsc --build",
+    "start:dev" : "nodemon"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +16,7 @@
   "dependencies": {
     "@codegrenade/naija-faker": "^1.0.4",
     "express": "^4.18.2",
-    "nanoid": "^4.0.0",
+    "nanoid": "^3.3.1",
     "pino": "^8.7.0",
     "pino-pretty": "^9.1.1",
     "ts-node": "^10.9.1",

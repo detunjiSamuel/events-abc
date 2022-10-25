@@ -11,7 +11,7 @@ export default class DataView {
   private entities: Entities<DataInfo> = {};
 
   constructor(private eventBus: EventBus) {
-    this.eventBus.subcribe("data", (event) => {
+    this.eventBus.subscribe("data", (event) => {
       this.entities[event.data.id] = apply(this.entities[event.data.id], event);
       logger.debug("updated", this.entities);
     });
