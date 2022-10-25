@@ -5,7 +5,7 @@ import Logger from "./logger";
 const emitter = new EventEmitter();
 const logger = new Logger("[Event-Bus]->");
 
-export class EventBus {
+export default class EventBus {
   publish = (topic: string, event: IEvent) => {
     logger.debug("Event emitted");
     emitter.emit(topic, event.get());
